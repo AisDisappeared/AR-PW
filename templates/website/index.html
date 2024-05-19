@@ -72,6 +72,7 @@
         .carousel-section {
             padding-top: 80px;
         }
+
         .auth-btn {
             padding: 10px 20px;
             border-radius: 30px;
@@ -94,7 +95,6 @@
             background-color: #ffc107;
             color: #000;
         }
-
     </style>
 </head>
 
@@ -136,13 +136,13 @@
                             </ul>
                         </li>
                     </ul>
-            
-                   <!-- Authentication Buttons -->
-                   <div class="d-flex justify-content-between mt-3">
-                    <button class="btn auth-btn login-btn">ورود</button>
-                    <button class="btn auth-btn logout-btn">خروج</button>
-                    <button class="btn auth-btn signup-btn">ثبت نام</button>
-                </div>
+
+                    <!-- Authentication Buttons -->
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn auth-btn login-btn">ورود</button>
+                        <button class="btn auth-btn logout-btn">خروج</button>
+                        <button class="btn auth-btn signup-btn">ثبت نام</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,15 +173,40 @@
     </div>
 
     <!-- Biography Section -->
-    <section class="aram-rouhani mt-5">
-        <div class="container">
-            <div class="description">
-                <p>آرام روحانی یک نوازنده گیتار فلامنکو است که به خاطر سبک نوازندگی شدید و احساسی‌اش که ماهیت موسیقی
-                    سنتی اسپانیا را به تصویر می‌کشد شهرت دارد.</p>
-            </div>
-            <img src="{% static 'images/maestro3.jpg' %}" alt="Aram Rouhani playing his guitar" class="image">
+<!-- Biography Section -->
+<section class="aram-rouhani mt-5">
+    <div class="container">
+        <div class="description">
+            <h2>تحصیلات مرتبط</h2>
+            <ul>
+                <li><strong>2001-2003:</strong> فراگیری گیتار در دپارتمان گیتار کلاسیک دانشگاه CONCORDIA، مونترال، کانادا</li>
+                <li><strong>2005-2007:</strong> فراگیری گیتار فلامنکو در کنسرواتوار موسیقی CODARTS، تحت نظر استاد Paco Peña، روتردام، هلند</li>
+                <li><strong>2007-2008:</strong> دوره تخصصی سبک فلامنکو در موسسه‌ی CRISTINA HEEREN FUNDACION - انستیتو موسیقی فلامنکو، تحت نظر استاد Pedro Sierra، سِویل، اسپانیا</li>
+            </ul>
+            <h2>فعالیت‌ها</h2>
+            <ul>
+                <li><strong>2003:</strong> نوازندگی و تهیه‌کنندگی کنسرت فلامنکو به حمایت از جامعه‌ی خیریه‌ی سرطان کانادا در سالن Oscar Peterson مونترال، کانادا</li>
+                <li><strong>2003:</strong> ساخت و اجرای موسیقی برای 6 اجرای نمایش "جاناتان مرغ دریایی" به کارگردانی لوون هفتوان در فستیوال تئاتر تورنتو، کانادا</li>
+                <li><strong>2004:</strong> نوازندگی و تهیه‌کنندگی دو کنسرت متفاوت فلامنکو در سالن TORONTO CENTER FOR THE ARTS</li>
+                <li><strong>2004:</strong> تهیه آلبوم موسیقی فلامنکو از اجرای زنده کنسرت سالن Oscar Peterson</li>
+                <li><strong>2004:</strong> کنسرت به نفع زلزله‌زدگان شهر بم، مونترال، کانادا</li>
+                <li><strong>2004-2005:</strong> آهنگسازی برای دو فیلم کوتاه به کارگردانی آرش صادقی و سام کلانتری</li>
+                <li><strong>2006:</strong> کنسرت به نفع زلزله‌زدگان هندوستان (پنجاب)، روتردام، هلند</li>
+                <li><strong>2007:</strong> آهنگسازی و تنظیم موسیقی برای نمایش موزیکال Hildegard Von Bingen به کارگردانی Cilia Hogerzeil - یکی از کارگردان‌های برجسته‌ی هلند، روتردام، هلند (تمامی گروه تحت نظر ایشان تمرین داده شده و 13 اجرای پیوسته در سال 2007 نتیجه‌ی این فعالیت‌ها بوده است)</li>
+                <li><strong>2011:</strong> نوازندگی، ادیت و تنظیم آلبوم Lisbeth Helgesen به اسم "I'm Fine"</li>
+                <li><strong>2012:</strong> نوازندگی و تهیه‌کنندگی کنسرت فلامنکو در سالن PARYA TRILLIUM FOUNDATION تورنتو، کانادا</li>
+                <li><strong>2018:</strong> اجرای صحنه‌ای با گروه موسیقی تلفیقی «نوآر»، به سرپرستی خودش در فرهنگسرای نیاوران، تهران، ایران</li>
+            </ul>
+            <h2>تجربه ی تدریس</h2>
+            <ul>
+                <li><strong>2008-2013:</strong> تدریس گیتار در تورنتو، کانادا</li>
+                <li><strong>2013 تا کنون:</strong> تدریس گیتار در ایران، به همراه توسعه و پیاده‌سازی یک سیستم پیشرفته‌ی آموزشی که در آن تکنیک‌های ابتدایی نواختن گیتار بصورت تاثیرگزار و در کوتاه‌مدت به هنرجویان مبتدیِ گیتار آموزش داده می‌شود؛ همچنین هنرجویان تازه‌کار و جوان را قادر به نواختن در فضای کنسرت می‌سازد. ضبط استودیویی هنرجو و اجرای صحنه‌ای در اولویت خواهند بود و همینطور شناسایی و برطرف‌کردن اشتباهات تکنیکی در هنرجویان مبتدی و پیشرفته و در نتیجه راحت‌تر نواختن و پیشگیری از آسیب‌دیدگی دست، گردن و ستون فقرات در طولانی‌مدت از اهداف مهم ایشان در تدریس است.</li>
+            </ul>
         </div>
-    </section>
+        <img src="{% static 'images/maestro3.jpg' %}" alt="Aram Rouhani playing his guitar" class="image">
+    </div>
+</section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
