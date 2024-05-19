@@ -183,7 +183,19 @@
             </div>
     </section>
 
-
+    <h1></h1>
+    <ul>
+      {% for vid in videos %}
+        <li>
+          <h2>{{ vid.title }}</h2>
+          <p>{{ vid.description }}</p>
+          <video controls>
+            <source src="/media/{{ vid.video }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </li>
+      {% endfor %}
+    </ul>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
