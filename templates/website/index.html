@@ -30,10 +30,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'website:index' %}">خانه</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">درباره</a>
+                            <a class="nav-link" href="{% url 'website:about' %}">درباره</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -41,7 +41,7 @@
                                 دوره ها و تماس با من
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">راه های تماس</a></li>
+                                <li><a class="dropdown-item" href="{% url 'website:contact' %}">راه های تماس</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
