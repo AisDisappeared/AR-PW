@@ -13,11 +13,39 @@
         .carousel-control-next {
             background-color: black;
         }
-        
+        .aram-rouhani {
+            background-color: #262626;
+            padding: 40px;
+          }
+          
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .description {
+            color: white;
+            flex-basis: 50%;
+            padding-right: 20px;
+          }
+          
+          .image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+          }
+          
+          /* Add some subtle gradient to enhance the visual appeal */
+          .background-gradient {
+            background-image: linear-gradient(to bottom, #333, #444);
+            background-size: 100% 100%;
+            background-position: 0% 100%;
+          }
     </style>
 </head>
 
-<body>  
+<body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
@@ -64,7 +92,8 @@
         </div>
     </nav>
 
-    <div id="carouselExample" class="carousel slide" data-interval="500" style="max-width: 600px; margin: 0 auto; text-align: center;">
+    <div id="carouselExample" class="carousel slide" data-interval="500"
+        style="max-width: 600px; margin: 0 auto; text-align: center;">
         <div class="carousel-inner">
             <div class="carousel-item active" data-description="This is a sample image">
                 <img src="{% static 'images/AWP.jpg'%}" alt="Image 1" style="max-width: 500%; height: 650px;">
@@ -106,6 +135,18 @@
     <!--         $(e.relatedTarget).append('<p>' + description + '</p>'); -->
     <!--     }); -->
     <!-- }); -->
+
+
+    <section class="aram-rouhani">
+        <div class="container">
+            <div class="description">
+                <p>Aram Rouhani is a flamenco guitarist known for his intense, emotive playing style that captures the
+                    essence of the traditional Spanish music...</p>
+            </div>
+            <img src="{% static 'images/maestro3.jpg' %}" alt="Aram Rouhani playing his guitar" class="image">
+        </div>
+    </section>
+
 
     <script src=https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js
         integrity=sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r
