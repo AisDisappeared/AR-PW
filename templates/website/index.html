@@ -72,6 +72,29 @@
         .carousel-section {
             padding-top: 80px;
         }
+        .auth-btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .login-btn {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .logout-btn {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .signup-btn {
+            background-color: #ffc107;
+            color: #000;
+        }
+
     </style>
 </head>
 
@@ -117,6 +140,12 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-success" type="submit">Search</button>
                     </form>
+                   <!-- Authentication Buttons -->
+                   <div class="d-flex justify-content-between mt-3">
+                    <button class="btn auth-btn login-btn">ورود</button>
+                    <button class="btn auth-btn logout-btn">خروج</button>
+                    <button class="btn auth-btn signup-btn">ثبت نام</button>
+                </div>
                 </div>
             </div>
         </div>
@@ -150,7 +179,8 @@
     <section class="aram-rouhani mt-5">
         <div class="container">
             <div class="description">
-                <p>آرام روحانی یک نوازنده گیتار فلامنکو است که به خاطر سبک نوازندگی شدید و احساسی‌اش که ماهیت موسیقی سنتی اسپانیا را به تصویر می‌کشد شهرت دارد.</p>
+                <p>آرام روحانی یک نوازنده گیتار فلامنکو است که به خاطر سبک نوازندگی شدید و احساسی‌اش که ماهیت موسیقی
+                    سنتی اسپانیا را به تصویر می‌کشد شهرت دارد.</p>
             </div>
             <img src="{% static 'images/maestro3.jpg' %}" alt="Aram Rouhani playing his guitar" class="image">
         </div>
