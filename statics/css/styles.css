@@ -145,3 +145,11 @@ body {
 :root {
     --font-family: 'Iranian Sans', Arial, sans-serif;
 }
+
+/* ------------------------------------------------------- */
+.main-title {
+    padding-top: 2%;;
+    color: #ffffff;
+    font-size: 27px;
+    font-family: 'Iranian Sans', Arial, sans-serif;
+}
