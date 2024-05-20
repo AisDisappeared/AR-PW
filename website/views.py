@@ -4,7 +4,7 @@ from courses.models import video
 
 
 def index_view(request):
-    videos = video.objects.all()
+    videos = video.objects.all().order_by('id').first()
     context = {"videos":videos}
     return render(request,'website/index.html',context)
 

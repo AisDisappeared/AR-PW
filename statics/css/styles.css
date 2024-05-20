@@ -70,7 +70,7 @@ body {
 /* Add Persian Font */
 @font-face {
     font-family: 'Iranian Sans';
-    src: url('path-to-your-fonts/iranian-sans.ttf') format('truetype');
+    src: url('../fonts/Iranian\ Sans.ttf') format('truetype');
     /* Replace 'path-to-your-fonts/iranian-sans.ttf' with the actual path to your font file */
 }
 
