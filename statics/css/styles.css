@@ -104,3 +104,36 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     /* Increase shadow on hover */
 }
+
+
+
+
+<!-- CSS -->
+.carousel-text {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.carousel-container {
+  flex-grow: 1;
+}
+
+
+.text-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: bold;
+}
