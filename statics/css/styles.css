@@ -117,36 +117,6 @@ body {
     /* Increase shadow on hover */
 }
 
-
-/* ------------------------------------------------------- */
-.carousel-text {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.text-left {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.carousel-container {
-  flex-grow: 1;
-}
-
-
-.text-right {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  font-size: 18px;
-  font-weight: bold;
-}
 /* ------------------------------------------------------- */
 
 .bio {
@@ -155,28 +125,23 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+
     /* Position the text inside the box */
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     /* Add some advanced styling */
     font-size: 60px;
     font-family: 'Iranian Sans', Arial, sans-serif;
     font-weight: bold;
     text-align: center;
-    
+
     /* Add some spacing around the text */
     margin-bottom: 20px;
-  }
-  
-  /* Define the font family variable */
-  :root {
+}
+
+/* Define the font family variable */
+:root {
     --font-family: 'Iranian Sans', Arial, sans-serif;
-  }
-
-
-
-
-
+}
