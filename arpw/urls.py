@@ -23,6 +23,7 @@ from django.conf import settings
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',include('website.urls')),
+    path('videos/',include('courses.urls')),
 ]
 
 

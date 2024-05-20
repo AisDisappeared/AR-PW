@@ -10,7 +10,20 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}" />
+    <style>
+        .more-videos-btn {
+            background-color: #bc685f;
+            color: #ffffff;
+            border: none;
+            padding: 20px 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
+        .more-videos-btn:hover {
+            background-color: #2a2a2a;
+        }
+    </style>
 </head>
 
 <body>
@@ -62,7 +75,7 @@
             </div>
         </div>
     </nav>
-
+    <!-- carousel section  -->
     <div id="carouselExample" class="carousel-section carousel slide" data-bs-ride="carousel" data-bs-interval="2000"
         style="max-width: 600px; margin: 0 auto; text-align: center;">
         <div class="carousel-inner">
@@ -84,7 +97,6 @@
         </div>
     </div>
 
-    <!-- Biography Section -->
     <!-- Biography Section -->
     <section class="aram-rouhani mt-5">
         <div class="container">
@@ -194,13 +206,19 @@
             </div>
     </section>
 
+    <!-- video and courses part -->
     <ul>
-        <h2 style="padding-left: 14%;">{{ videos.title }}</h2>
+        <h2 style="padding-left: 14%; padding-top:2%;">{{ videos.title }}</h2>
         <video controls width="800" height="400" style="padding-left: 4%;">
             <source src="/media/{{ videos.video }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div style="padding-left: 16%; padding-top: 2%;">
+            <a href="{% url 'courses:videos' %}"> <button class="more-videos-btn">More Videos</button></a>
+        </div>
     </ul>
+
+    <!-- js scrips -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
