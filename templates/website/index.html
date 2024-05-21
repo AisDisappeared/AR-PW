@@ -220,21 +220,38 @@
                                 صلاحیت تدریس از سال 1399</li>
                             <li style="font-weight: bold; padding-top:3%;">حضور در دو دوره مسابقات گیتار فلامنکو برگزار
                                 شده توسط فستیوال گیتار ایران به عنوان داور رسمی </li>
-                            <li style="font-weight: bold; padding-top:3%;">برگزاری کارگاه گیتار فلامنکو آبان ماه سال 1402
+                            <li style="font-weight: bold; padding-top:3%;">برگزاری کارگاه گیتار فلامنکو آبان ماه سال
+                                1402
                                 آموزشگاه موسیقی باقی بهشهر</li>
-                            <li style="font-weight: bold; padding-top:3%;"> برگزاری کارگاه گیتار فلامنکو دی ماه سال 1402 آموزشگاه موسیقی فاخته تنکابن</li>
+                            <li style="font-weight: bold; padding-top:3%;"> برگزاری کارگاه گیتار فلامنکو دی ماه سال 1402
+                                آموزشگاه موسیقی فاخته تنکابن</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- <div class="col-md-12 mt-5">
+                <div class="col-md-12 mt-5">
                     <h2
                         style="text-align: center; font-size: 24px; color: white; margin-bottom: 30px; border-bottom: 2px solid #ffffff; padding-bottom: 10px;">
                         موسساتی که آرام روحانی در آن‌ها تدریس می‌کند
                     </h2> -->
-                <!-- <div class="row"> -->
-                <!-- Institute 1 -->
-                <!-- <div class="col-md-4">
+                    <div class="row">
+                        <!-- Institute 1 -->
+                        <div class="col-md-4">
+                            <div class="institute-card">
+                                <img src="{% static 'images/hatra.jpg' %}" alt="Institute 1"
+                                    class="img-fluid institute-img">
+                                <h4 style="color:white; text-align:center;"><strong>‌‌آموزشگاه موسیقی هترا </strong>
+                                </h4>
+                                <hr>
+                                <p style="color: white;"><strong>آدرس : </strong> تهران - یوسف آباد - فتحی شقاقی -
+                                    پلاک
+                                    ۸۲</p>
+                                <p style="color: white;"><strong>تلفن : </strong>۰۲۱-۸۸۰۲۳۷۲۰ / ۰۲۱-۸۸۰۲۳۷۳۳</p>
+                                <hr>
+                            </div>
+                        </div>
+                        <!-- Institute 2 -->
+                        <div class="col-md-4">
                             <div class="institute-card">
                                 <img src="{% static 'images/hatra.jpg' %}" alt="Institute 1"
                                     class="img-fluid institute-img">
@@ -248,39 +265,25 @@
                                 <hr>
                             </div>
                         </div> -->
-                <!-- Institute 2 -->
-                <!-- <div class="col-md-4">
-                            <div class="institute-card">
-                                <img src="{% static 'images/hatra.jpg' %}" alt="Institute 1"
-                                    class="img-fluid institute-img">
-                                <h4 style="color:white; text-align:center;"><strong>‌‌آموزشگاه موسیقی هترا </strong>
-                                </h4>
-                                <hr>
-                                <p style="color: white;"><strong>آدرس : </strong> تهران - یوسف آباد - فتحی شقاقی -
-                                    پلاک
-                                    ۸۲</p>
-                                <p style="color: white;"><strong>تلفن : </strong>۰۲۱-۸۸۰۲۳۷۲۰ / ۰۲۱-۸۸۰۲۳۷۳۳</p>
-                                <hr>
-                            </div>
-                        </div> -->
-                <!-- </div> -->
-                <!-- </div> -->
+                    </div>
+                </div>
             </div>
     </section>
 
     <!-- ---------------------------------------------------------------------- -->
     <!-- video and courses part -->
     <ul>
-        <h2 style="padding-left: 37%; padding-top:1%;">آرام روحانی نوازنده و مدرس  گیتار فلامنکو </h2>
+        <h2 style="padding-left: 37%; padding-top:1%;">آرام روحانی نوازنده و مدرس گیتار فلامنکو </h2>
         {% for video in videos %}
-        <video controls width="900" height="400" style="padding-left: 15%; padding-top:1%;">
+        <h3>{{video.title}}</h3>
+        <video controls width="800" height="300" style="padding-left: 5%; padding-top:1%;">
             <source src="/media/{{ video.video }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!-- <hr> -->
+        <hr>
         {% endfor %}
     </ul>
-    <div style="padding-left: 17%; padding-bottom: 15%;">
+    <div style="padding-left: 2%; padding-bottom: 15%;">
         <a href="{% url 'courses:videos' %}"> <button class="more-videos-btn">همه ی ویدیو ها</button></a>
     </div>
 
