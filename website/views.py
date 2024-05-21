@@ -7,7 +7,7 @@ import sweetify
 
 
 def index_view(request):
-    videos = video.objects.all().order_by('id').first()
+    videos = video.objects.all().order_by('id')[:4]
     context = {"videos":videos}
     return render(request,'website/index.html',context)
 

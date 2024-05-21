@@ -271,17 +271,18 @@
     <!-- ---------------------------------------------------------------------- -->
     <!-- video and courses part -->
     <ul>
-        <h2 style="padding-left: 9%; padding-top:2%;">{{ videos.title }}</h2>
-        <video controls width="800" height="400" style="padding-left: 4%;">
-            <source src="/media/{{ videos.video }}" type="video/mp4">
+        <h2 style="padding-left: 37%; padding-top:1%;">آرام روحانی نوازنده و مدرس  گیتار فلامنکو </h2>
+        {% for video in videos %}
+        <video controls width="900" height="400" style="padding-left: 15%; padding-top:1%;">
+            <source src="/media/{{ video.video }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div style="padding-left: 16%; padding-top: 2%;">
-            <a href="{% url 'courses:videos' %}"> <button class="more-videos-btn">همه ی ویدیو ها</button></a>
-        </div>
+        <!-- <hr> -->
+        {% endfor %}
     </ul>
-
-
+    <div style="padding-left: 17%; padding-bottom: 15%;">
+        <a href="{% url 'courses:videos' %}"> <button class="more-videos-btn">همه ی ویدیو ها</button></a>
+    </div>
 
     <!-- ----------------------------------------------------------------------- -->
     <footer class="footer">
