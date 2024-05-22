@@ -131,7 +131,6 @@
         }
 
         /* Custom styling for authentication buttons */
-        /* Custom styling for authentication buttons */
         .navbar-brand {
             font-size: 1.5rem;
             /* Increase font size for the brand */
@@ -184,10 +183,10 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item me-lg-2"> <!-- Added "me-lg-2" class for margin-right -->
-                        <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'website:index' %}">خانه</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ویدیو ها</a>
+                        <a class="nav-link {% if '/videos/' in request.path %}active{% endif %}"  href="{% url 'courses:videos' %}">ویدیو ها</a>
                     </li>
                 </ul>
                 <div class="navbar-text">

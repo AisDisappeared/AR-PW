@@ -9,8 +9,6 @@ from .forms import *
 from courses.models import video
 import sweetify
 
-# Create your views here.
-
 
 # Login View Function
 def login_view(request):
