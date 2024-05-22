@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.views.generic import TemplateView
 from django.views import View
 from .forms import * 
+from courses.models import video
 import sweetify
 
 # Create your views here.
@@ -88,4 +89,6 @@ class LogoutView(TemplateView, View):
         logout(request)
         sweetify.success(request,'logout successful',persistent = 'OK')
           # Redirect to the desired page after logout with a Sweetify notification
-        return render(request, 'website/index.html')
+        videos = video.objects.all().order_by('id')[:4]
+        context = {"videos":videos}
+        return render(request, 'website/index.html',context)
