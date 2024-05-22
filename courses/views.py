@@ -1,8 +1,7 @@
 import re
 from django.shortcuts import render
 from .models import video
-# Create your views here.
-
+from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 
 def courses_view(request):
     videos = video.objects.all().order_by('id')
@@ -13,6 +12,19 @@ def courses_view(request):
     
     # Bulk update all videos to save the incremented views
     video.objects.bulk_update(videos, ['views'])
-    
+      
+    p = Paginator(videos,9)
+    try:
+        page_number = request.GET.get('page')
+        videos = p.get_page(page_number)
+    except EmptyPage:
+        videos = videos.get_page(1)
+    except PageNotAnInteger:
+        videos = videos.get_page(1)
+
+
     context = {"videos": videos}
     return render(request, 'courses/videos.html', context)
+
+
+
