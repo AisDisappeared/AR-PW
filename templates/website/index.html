@@ -64,6 +64,71 @@
             font-size: 16px;
             margin-bottom: 10px;
         }
+
+        .contact-section {
+            background-color: #222222;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-content h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .contact-content p {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-icon {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 2.5rem;
+            transition: transform 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-icon i {
+            margin-bottom: 10px;
+        }
+
+        .contact-icon span {
+            font-size: 1.2rem;
+        }
+
+        .contact-icon:hover {
+            transform: translateY(-5px);
+            color: #f39c12;
+        }
+
+        .contact-icon.whatsapp:hover {
+            color: #25d366;
+        }
+
+        .contact-icon.instagram:hover {
+            color: #e1306c;
+        }
+
+        .contact-icon.email:hover {
+            color: #3498db;
+        }
     </style>
 </head>
 
@@ -352,6 +417,30 @@
         <a href="{% url 'courses:videos' %}"> <button class="more-videos-btn">همه ی ویدیو ها</button></a>
     </div>
 
+
+    <div class="contact-section">
+        <div class="contact-content">
+            <h2>تماس با من</h2>
+            <p>برای ارتباط از راه‌های زیر استفاده کنید</p>
+            <div class="contact-icons">
+                <a href="https://wa.me/989128231807" class="contact-icon whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.instagram.com/aram_rohani/" class="contact-icon instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="mailto:aramrohani@yahoo.com" class="contact-icon email" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- ----------------------------------------------------------------------- -->
     <footer class="footer">
         <div class="container">
@@ -403,6 +492,7 @@
     </footer>
 
 
+
     <!-- js scrips -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -411,7 +501,15 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.5/sweetalert2.all.min.js"></script>
-
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            const icons = document.querySelectorAll('.contact-icon');
+            icons.forEach((icon, index) => {
+                setTimeout(() => {
+                    icon.classList.add('bounce');
+                }, index * 100);
+            });
+        });
+    </script>
 
     {% load sweetify %}
     {% sweetify %}
