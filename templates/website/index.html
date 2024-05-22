@@ -129,54 +129,63 @@
         .contact-icon.email:hover {
             color: #3498db;
         }
+
+        /* Custom styling for authentication buttons */
+
+        .btn-login,
+        .btn-register,
+        .btn-logout {
+            color: #fff;
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-login {
+            background-color: #007bff;
+        }
+
+        .btn-register {
+            background-color: #28a745;
+        }
+
+        .btn-logout {
+            background-color: #dc3545;
+        }
+
+        .btn-login:hover,
+        .btn-register:hover,
+        .btn-logout:hover {
+            color: #fff;
+            border-color: transparent;
+            filter: brightness(90%);
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Aram Rouhani | آرام روحانی</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Aram Rouhani</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'website:index' %}">خانه</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'website:about' %}">درباره</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                دوره ها و تماس با من
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="{% url 'website:contact' %}">راه های تماس</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">آموزش و دوره ها</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <!-- Authentication Buttons -->
-                    <div class="d-flex justify-content-between mt-3">
-                        <button class="btn auth-btn login-btn">ورود</button>
-                        <button class="btn auth-btn logout-btn">خروج</button>
-                        <button class="btn auth-btn signup-btn">ثبت نام</button>
-                    </div>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ویدیو ها </a>
+                    </li>
+                </ul>
+                <div class="navbar-text">
+                    <a href="#" class="btn btn-login">ورود</a>
+                    <a href="#" class="btn btn-register">ثبت نام</a>
+                    <a href="#" class="btn btn-logout">خروج</a>
                 </div>
             </div>
         </div>

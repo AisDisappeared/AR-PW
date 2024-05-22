@@ -50,37 +50,12 @@ body {
 
 /* ------------------------------------------------------- */
 
-.auth-btn {
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.login-btn {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.logout-btn {
-    background-color: #dc3545;
-    color: #fff;
-}
-
-.signup-btn {
-    background-color: #ffc107;
-    color: #000;
-}
-
 /* Add Persian Font */
 @font-face {
     font-family: 'Iranian Sans';
     src: url('../fonts/Iranian\ Sans.ttf') format('truetype');
     /* Replace 'path-to-your-fonts/iranian-sans.ttf' with the actual path to your font file */
 }
-
-
 
 /* ------------------------------------------------------- */
 
@@ -272,9 +247,3 @@ body {
 .footer-subscribe button:hover {
     background-color: #0056b3;
 }
-
-
-
-
-
-
