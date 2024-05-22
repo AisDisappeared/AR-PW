@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'courses',
     'taggit',
     'sweetify',
-
+    'captcha',
 ]
 
 

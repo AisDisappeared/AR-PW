@@ -27,6 +27,7 @@ urlpatterns = [
     path('',include('website.urls')),
     path('videos/',include('courses.urls')),
     path('accounts/' , include("accounts.urls")),
+    path('captcha/', include('captcha.urls')),
 
 
     ############################## Django Reset Password System ##############################
