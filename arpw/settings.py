@@ -31,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'multi_captcha_admin',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'django.contrib.sites',
     'website',
     'accounts',
     'courses',
@@ -44,6 +46,12 @@ INSTALLED_APPS = [
     'sweetify',
 
 ]
+
+
+
+# site id 
+SITE_ID = 1
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -106,6 +114,15 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# internal ip
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -133,16 +150,34 @@ STATICFILES_DIRS = [
 
 
 
-STATICFILES_DIRS = [
-    BASE_DIR / "statics"
-]
-
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-
+# sweetify pop up notiF
 SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'
+
+
+# multi captcha for ORM admin panel
+MULTI_CAPTCHA_ADMIN = {
+    'engine': 'simple-captcha',
+}
+
+
+# Django auth backends
+AUTHENTICATION_BACKENDS = [
+    'accounts.custom_auth_backends.CustomAuthenticationBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+
+
+# django smtp email backend settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'Alihunter4640@gmail.com'
+EMAIL_HOST_PASSWORD = 'umewmbhmmzimbqmy'

@@ -131,36 +131,44 @@
         }
 
         /* Custom styling for authentication buttons */
+        /* Custom styling for authentication buttons */
+        .navbar-brand {
+            font-size: 1.5rem;
+            /* Increase font size for the brand */
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            /* Increase font size for the navbar links */
+        }
 
         .btn-login,
         .btn-register,
         .btn-logout {
             color: #fff;
-            border: 2px solid transparent;
             padding: 10px 20px;
             border-radius: 30px;
-            text-decoration: none;
             font-weight: bold;
+            transition: all 0.3s ease;
         }
 
         .btn-login {
-            background-color: #007bff;
+            background: linear-gradient(45deg, #4e73df, #224abe);
         }
 
         .btn-register {
-            background-color: #28a745;
+            background: linear-gradient(45deg, #1cc88a, #17a673);
         }
 
         .btn-logout {
-            background-color: #dc3545;
+            background: linear-gradient(45deg, #e74a3b, #d32f2f);
         }
 
         .btn-login:hover,
         .btn-register:hover,
         .btn-logout:hover {
-            color: #fff;
-            border-color: transparent;
-            filter: brightness(90%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -168,29 +176,31 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Aram Rouhani</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">خانه</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ویدیو ها </a>
-                    </li>
-                </ul>
-                <div class="navbar-text">
-                    <a href="#" class="btn btn-login">ورود</a>
-                    <a href="#" class="btn btn-register">ثبت نام</a>
-                    <a href="#" class="btn btn-logout">خروج</a>
-                </div>
+          <a class="navbar-brand me-4" href="#">آرم روحانی</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item me-lg-2"> <!-- Added "me-lg-2" class for margin-right -->
+                <a class="nav-link active" aria-current="page" href="#">خانه</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ویدیو ها</a>
+              </li>
+            </ul>
+            <div class="navbar-text">
+              {% if request.user.is_authenticated %}
+              <a href="{% url 'accounts:logout' %}" class="btn btn-logout ms-lg-2">خروج</a>
+              {% else %}
+              <a href="{% url 'accounts:login' %}" class="btn btn-login ms-lg-2">ورود</a>
+              <a href="{% url 'accounts:register' %}" class="btn btn-register ms-lg-2">ثبت نام</a>
+              {% endif %}
             </div>
+          </div>
         </div>
-    </nav>
-
+      </nav>
 
     <!-- carousel section -->
     <div id="carouselExample" class="carousel-section carousel slide" data-bs-ride="carousel" data-bs-interval="2000"
