@@ -5,4 +5,14 @@ from .models import video
 
 
 def courses_view(request):
-    return render (request,'courses/videos.html')
+    videos = video.objects.all().order_by('id')
+    
+    # Increment views for each video
+    for vid in videos:
+        vid.views += 1
+    
+    # Bulk update all videos to save the incremented views
+    video.objects.bulk_update(videos, ['views'])
+    
+    context = {"videos": videos}
+    return render(request, 'courses/videos.html', context)
