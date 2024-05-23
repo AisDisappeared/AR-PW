@@ -36,6 +36,7 @@ def video_search(request):
     if request.method == 'GET':
         if s := request.GET.get('s'):
             videos = videos.filter(title__contains=s)
-    
+    if not s:   
+        return redirect(request.META.get('HTTP_REFERER'))
     context = {'videos': videos}
     return render(request, 'courses/videos.html', context)
