@@ -19,6 +19,16 @@ from django.urls import path , include
 from django.conf.urls.static import static
 from django.conf import settings 
 from django.contrib.auth import views as auth_views
+from django.contrib.sitemaps.views import sitemap
+from website.sitemaps import StaticViewSitemap
+from courses.sitemaps import VideosStatic
+
+
+
+sitemaps = {
+    "static": StaticViewSitemap ,
+    "VideosStatic" : VideosStatic ,
+}
 
 
 
@@ -28,6 +38,7 @@ urlpatterns = [
     path('videos/',include('courses.urls')),
     path('accounts/' , include("accounts.urls")),
     path('captcha/', include('captcha.urls')),
+    path("sitemap.xml",sitemap,{"sitemaps": sitemaps},name="django.contrib.sitemaps.views.sitemap",),
 
 
     ############################## Django Reset Password System ##############################

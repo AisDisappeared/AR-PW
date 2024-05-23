@@ -6,5 +6,5 @@ app_name = 'courses'
 
 
 urlpatterns = [
-    path('videos/',courses_view,name='videos'),
+    path('',courses_view,name='videos'),
 ]
