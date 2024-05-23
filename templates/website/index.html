@@ -181,7 +181,7 @@
         .social-icons i:hover {
             color: #248d76;
         }
-        
+
         .video-views {
             font-size: 14px;
             color: #999;
@@ -214,7 +214,8 @@
                     </li>
                 </ul>
                 <form class="d-flex" action="{% url 'courses:search' %}" method="get">
-                    <input class="form-control me-2" type="search" placeholder="Search videos by title" name="s" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search videos by title" name="s"
+                        aria-label="Search">
                     <button class="btn btn-outline-secondary" type="submit">Search</button>
                 </form>
                 <div class="navbar-text">
@@ -385,8 +386,8 @@
                         موسساتی که آرام روحانی در آن‌ها تدریس می‌کند
                     </h2>
                     <div class="row"> -->
-                        <!-- Institute 1 -->
-                        <!-- <div class="col-md-4">
+                <!-- Institute 1 -->
+                <!-- <div class="col-md-4">
                             <div class="institute-card">
                                 <img src="{% static 'images/hatra.jpg' %}" alt="Institute 1"
                                     class="img-fluid institute-img">
@@ -400,8 +401,8 @@
                                 <hr>
                             </div>
                         </div> -->
-                        <!-- Institute 2 -->
-                        <!-- <div class="col-md-4">
+                <!-- Institute 2 -->
+                <!-- <div class="col-md-4">
                             <div class="institute-card">
                                 <img src="{% static 'images/hatra.jpg' %}" alt="Institute 1"
                                     class="img-fluid institute-img">
@@ -416,33 +417,33 @@
                             </div>
                         </div>
                     </div> -->
-                    <!--------------------------------------------------------------------------------------------------- -->
-                    <hr style="padding-top: 5%;">
-                    <h2
-                        style="text-align: center; font-size: 27px; color: white; margin-bottom: 30px; border-bottom: 2px solid #ffffff; padding-bottom: 20px;">
-                        مجموعه آموزش گیتار فلامنکو توسط آرام روحانی و خنیاگر
-                    </h2>
-                    <!-- Flamenco Package Section -->
-                    <!-- بسته فلامنکو -->
-                    <div class="flamenco-package">
-                        <h3>مجموعه آموزش گیتار فلامنکو توسط آرام روحانی و خنیاگر
-                        </h3>
-                        <h4
-                            style="text-align: center; padding-top:2%; font-size: 20px; color: white; margin-bottom: 30px; border-bottom: 2px solid #ffffff; padding-bottom: 20px;">
-                            مجموعه اول </h4>
-                        <p>با گذراندن این مجموعه آموزشی، گیتار فلامنکو را از نقطه‌ی صفر تا نواختن قطعات دلفریب فلامنکو
-                            خواهی آموخت</p>
-                        <video controls width="700" height="500" style="padding-left: 7%;">
-                            <source src="/media/videos/khoniyagar.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <h3 style="padding-left: 42%;"><a style="text-decoration: none; color: rgb(39, 133, 102);"
-                                href="https://khonyagar.com/e-learning/guitar-flamenco-aram-rohani" target="_blank">خرید
-                                الان</a></h3>
+                <!--------------------------------------------------------------------------------------------------- -->
+                <hr style="padding-top: 5%;">
+                <h2
+                    style="text-align: center; font-size: 27px; color: white; margin-bottom: 30px; border-bottom: 2px solid #ffffff; padding-bottom: 20px;">
+                    مجموعه آموزش گیتار فلامنکو توسط آرام روحانی و خنیاگر
+                </h2>
+                <!-- Flamenco Package Section -->
+                <!-- بسته فلامنکو -->
+                <div class="flamenco-package">
+                    <h3>مجموعه آموزش گیتار فلامنکو توسط آرام روحانی و خنیاگر
+                    </h3>
+                    <h4
+                        style="text-align: center; padding-top:2%; font-size: 20px; color: white; margin-bottom: 30px; border-bottom: 2px solid #ffffff; padding-bottom: 20px;">
+                        مجموعه اول </h4>
+                    <p>با گذراندن این مجموعه آموزشی، گیتار فلامنکو را از نقطه‌ی صفر تا نواختن قطعات دلفریب فلامنکو
+                        خواهی آموخت</p>
+                    <video controls width="700" height="500" style="padding-left: 7%;">
+                        <source src="/media/videos/khoniyagar.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3 style="padding-left: 42%;"><a style="text-decoration: none; color: rgb(39, 133, 102);"
+                            href="https://khonyagar.com/e-learning/guitar-flamenco-aram-rohani" target="_blank">خرید
+                            الان</a></h3>
 
-                    </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- ---------------------------------------------------------------------- -->
@@ -505,12 +506,13 @@
             <div class="row">
                 <div class="col-md-4">
                     <h5>About</h5>
-                    <p style="padding-top: 3%; padding-right:25%">Official website of Aram Rouhani - flamenco guitar player and teacher.</p>
+                    <p>Official website of Aram Rouhani Flamenco guitarist and teacher.</p>
                 </div>
                 <div class="col-md-4">
                     <h5>Navigation</h5>
                     <ul class="list-unstyled" style="padding-top: 3%;">
                         <li><a href="{% url 'courses:videos' %}">Videos</a></li>
+                        <li><a href="{% url 'website:index' %}">Home</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
