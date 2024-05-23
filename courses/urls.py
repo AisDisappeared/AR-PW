@@ -7,4 +7,5 @@ app_name = 'courses'
 
 urlpatterns = [
     path('',courses_view,name='videos'),
+    path('search/',video_search,name='search'),
 ]

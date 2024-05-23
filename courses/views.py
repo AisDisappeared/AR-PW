@@ -1,7 +1,9 @@
 import re
-from django.shortcuts import render
+from django.shortcuts import render ,redirect
 from .models import video
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+
+
 
 def courses_view(request):
     videos = video.objects.all().order_by('id')
@@ -28,3 +30,12 @@ def courses_view(request):
 
 
 
+
+def video_search(request):
+    videos = video.objects.all()
+    if request.method == 'GET':
+        if s := request.GET.get('s'):
+            videos = videos.filter(title__contains=s)
+    
+    context = {'videos': videos}
+    return render(request, 'courses/videos.html', context)
