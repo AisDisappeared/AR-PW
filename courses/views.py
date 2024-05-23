@@ -13,7 +13,7 @@ def courses_view(request):
     # Bulk update all videos to save the incremented views
     video.objects.bulk_update(videos, ['views'])
       
-    p = Paginator(videos,9)
+    p = Paginator(videos,6)
     try:
         page_number = request.GET.get('page')
         videos = p.get_page(page_number)
