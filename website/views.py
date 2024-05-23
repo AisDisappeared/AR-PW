@@ -8,18 +8,19 @@ import sweetify
 
 def index_view(request):
     videos = video.objects.all().order_by('id')[:4]
+    # Increment views for each video
+    for vid in videos:
+        vid.views += 1
+    
+    # Bulk update all videos to save the incremented views
+    video.objects.bulk_update(videos, ['views'])
+
+
     context = {"videos":videos}
     return render(request,'website/index.html',context)
 
 
 
-def contact_view(request):
-    return render(request,'website/contact.html')
-
-
-
-def about_view(request):
-    return render(request,'website/about.html')
 
 
 

@@ -179,6 +179,16 @@
         .social-icons i:hover {
             color: #248d76;
         }
+        
+        .video-views {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .view-count {
+            font-weight: bold;
+            color: #bd4444;
+        }
     </style>
 </head>
 
@@ -440,6 +450,7 @@
             <source src="/media/{{ video.video }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <p class="video-views">Views: <span class="view-count">{{ video.views }}</span></p>
         <hr>
         {% endfor %}
     </ul>
