@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
         .more-videos-btn {
-            background-color: #bc685f;
+            background-color: #209251;
             color: #ffffff;
             border: none;
             padding: 20px 60px;
-            font-size: 18px;
+            font-size: 20px;
             cursor: pointer;
-            font-family: 'Iranian Sans', sans-serif;
         }
 
         .more-videos-btn:hover {
@@ -191,6 +190,17 @@
             font-weight: bold;
             color: #bd4444;
         }
+        .page-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            background-color: #b73d3d; /* Add a subtle background color */
+            padding: 10px; /* Add some padding */
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.1); /* Add a subtle drop shadow */
+            font-weight: bold; /* Use a bold font weight */
+          }
     </style>
 </head>
 
@@ -440,7 +450,6 @@
                     <h3 style="padding-left: 42%;"><a style="text-decoration: none; color: rgb(39, 133, 102);"
                             href="https://khonyagar.com/e-learning/guitar-flamenco-aram-rohani" target="_blank">خرید
                             الان</a></h3>
-
                 </div>
             </div>
         </div>
@@ -449,10 +458,10 @@
     <!-- ---------------------------------------------------------------------- -->
     <!-- video and courses part -->
     <ul>
-        <h2 style="padding-left: 37%; padding-top:1%;">آرام روحانی نوازنده و مدرس گیتار فلامنکو </h2>
+        <h3 class="page-title">اجرا و ویدیو ها </h3>
         {% for video in videos %}
         <h3>* {{video.title}} *</h3>
-        <video controls width="900" height="500" style="padding-left: 2%; padding-top:2%;">
+        <video controls width="800" height="300" style="padding-left: 2%; padding-top:2%;">
             <source src="/media/{{ video.video }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
