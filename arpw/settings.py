@@ -46,12 +46,17 @@ INSTALLED_APPS = [
     'taggit',
     'sweetify',
     'captcha',
+    'robots',
 ]
 
 
 
 # site id 
 SITE_ID = 1
+
+# ROBOTS TEXT FILE SETTINGS CONFIG
+ROBOTS_USE_HOST = True
+ROBOTS_USE_SITEMAP = True
 
 
 MIDDLEWARE = [
